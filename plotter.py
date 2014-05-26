@@ -4,10 +4,12 @@ import matplotlib.pyplot as plt
 class PointSet(object):
 	
 	def __init__(self,filename,delimeter):
-		self.filename = filename
 		self.X = []; self.Y = []; self.Z = []
-		with open(self.filename) as f:
-			l = f.readline().split(delimeter)
+		
+		f = open(filename).readlines()
+		
+		for l in f:
+			l = l.split(delimeter)
 			self.X.append(float(l[0]))
 			self.Y.append(float(l[1]))
 			self.Z.append(float(l[2]))
@@ -22,7 +24,7 @@ class PointSet(object):
 		minZ = min(self.Z)
 		for z in self.Z:
 			z = z - minZ
-		
+
 fig = plt.figure()
 ax = fig.add_subplot(111,projection='3d')
 
@@ -39,6 +41,6 @@ ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
 
-fig.show()
+plt.show()
 
 
