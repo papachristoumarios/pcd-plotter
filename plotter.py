@@ -13,17 +13,17 @@ class PointSet(object):
 			self.X.append(float(l[0]))
 			self.Y.append(float(l[1]))
 			self.Z.append(float(l[2]))
+
 			
 	def clear_location(self):
 		minX = min(self.X)
-		for x in self.X:
-			x = x - minX
 		minY = min(self.Y)
-		for y in self.Y:
-			y = y - minY
 		minZ = min(self.Z)
-		for z in self.Z:
-			z = z - minZ
+		for i in range(len(self.X)):
+			X[i] -= minX
+			Y[i] -= minY
+			Z[i] -= minZ
+		
 
 fig = plt.figure()
 ax = fig.add_subplot(111,projection='3d')
