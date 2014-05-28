@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
@@ -28,7 +29,10 @@ class PointSet(object):
 fig = plt.figure()
 ax = fig.add_subplot(111,projection='3d')
 
-p = PointSet('foo.asc',',')
+ans = raw_input('Enter the file you want to plot (e.g. foo.asc):')
+d = raw_input('Enter the delimeter character: ')
+
+p = PointSet(ans,d)
 
 #sample points
 #X = [1,2,3,4,5,6,7,8,9]
