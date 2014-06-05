@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
+import sys
+
+
+if sys.version_info >= (3,0):
+	raw_input = input 
 
 class PointSet(object):
 	
