@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import sys
 
 
+<<<<<<< HEAD
+=======
+#python3 modification
+>>>>>>> f85394be0ba280622edff53ed6cd8fac4ee2e13f
 if sys.version_info >= (3,0):
 	raw_input = input 
 
