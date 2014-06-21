@@ -4,10 +4,8 @@ import matplotlib.pyplot as plt
 import sys
 
 
-<<<<<<< HEAD
-=======
 #python3 modification
->>>>>>> f85394be0ba280622edff53ed6cd8fac4ee2e13f
+
 if sys.version_info >= (3,0):
 	raw_input = input 
 
@@ -43,10 +41,6 @@ d = raw_input('Enter the delimeter character: ')
 
 p = PointSet(ans,d)
 
-#sample points
-#X = [1,2,3,4,5,6,7,8,9]
-#Y = [4,5,6,7,7,8,5,3,5]
-#Z = [3,6,7,8,6,5,3,2,1]
 
 ax.scatter(p.X,p.Y,p.Z, c='r', marker='o')
 
